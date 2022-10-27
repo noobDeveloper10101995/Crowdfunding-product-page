@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Crowdfunding product page</title>
 
@@ -17,18 +20,22 @@
 <body>
 <main>
   <header>
-    <div role="none" class="flexB">
+    <div role="img" class="bgImage">
+      <img src="images\image-hero-mobile.jpg" alt="bgImage">
+    </div>
+    <div role="none" class="nav-sec flexB">
       <div class="logo" role="img">
         <img src="images\logo.svg" alt="logo">
       </div>
-
-      <nav>
+      
+      <a class="nav-btn" href="#" role="button"><img src="images\icon-hamburger.svg" alt="button"></a>
+      <nav class="nav">
         <a href="#">About</a><a href="#">Discover</a><a href="#">Get Started</a>
       </nav>
     </div>
   </header>
 
-  <section class="container sec-1" >
+  <section class="container card sec-1" >
     <div class="masterCraft-Logo" role="img">
       <img src="images\logo-mastercraft.svg" alt="Master Craft">
     </div>
@@ -37,24 +44,25 @@
     <p>A beautifully handcrafted monitor stand to reduce neck and eye strain.</p>
 
     <div class="sec-1-Buttons flexB">
-      <a role="button" href="#">Back this project</a><a role="button" href="#"><img src="images\icon-bookmark.svg" alt=""></a>
+      <a class="activeBtn flexI" role="button" href="#">Back this project</a>
+      <a class="flexI" role="button" href="#"><img src="images\icon-bookmark.svg" alt=""></a>
     </div>
 
   </section>
 
 
-  <section class="container sec-2">
+  <section class="container card sec-2">
     <div class="tracker flexB" role="none">
-      <div class="donated" role="none">
-       <p>$89,914</p>
+      <div class="donated group" role="none">
+       <p class="numBold">$89,914</p>
        <p>of $100,000 backed</p> 
       </div>
-      <div class="people" role="none">
-        <p>5,007</p>
+      <div class="people group" role="none">
+        <p class="numBold">5,007</p>
         <p>total backers</p>
       </div>
-      <div class="days" role="none">
-        <p>56</p>
+      <div class="days group" role="none">
+        <p class="numBold">56</p>
         <p>days left</p>
       </div>
     </div>
@@ -63,70 +71,77 @@
     </div>
   </section>
 
-  <section class="container sec-3">
+  <section class="container card sec-3">
     <article class="about-this-project">
-      <h2>About this project</h2>
-      <p>The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
+      <h2 class="row">About this project</h2>
+      <p class="row">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
         to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve 
         your posture and make you more comfortable while at work, helping you stay focused on the task at hand.
-      
-        Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
-        to allow notepads, pens, and USB sticks to be stored under the stand.
         </p>
+
+        <p class="row"> Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
+          to allow notepads, pens, and USB sticks to be stored under the stand.</p>
     </article>
 
-    <section class="pledges-sec container">
-      <div role="none" class="flexB headings">
-        <h3>Bamboo Stand</h3>
-        <h4>Pledge $25 or more</h4>
-      </div>
-
-      <div role="none" class="typo">
-        <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
-          you’ll be added to a special Backer member list.</p>
-      </div>
-
-      <div class="noOfItemsNselectReward flexB">
-        <p>101 <span>left</span></p>
-        <a href="#">Select Reward</a>
-      </div>
-
-    </section>
-     <section class="pledges-sec container">
-      <div role="none" class="flexB heading">
-      <h3>Black Edition Stand</h3>
-      <h4>Pledge $75 or more</h4>
-      </div>
-
-      <div role="none" class="typo">
-      <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
-        member list. Shipping is included.</p>
-      </div>
-
-     <div class="noOfItemsNselectReward flexB">
-      <p>64 <span>left</span></p>
-      <a href="#">Select Reward</a>
-     </div>
-    </section>
-   
-    <section class="pledges-sec out-of-stock container">
-      <div role="none" class="flexB heading">
-      <h3>Mahogany Special Edition</h3>
-      <h4>Pledge $200 or more</h4>
-      </div>
-
-      <div role="none" class="typo">
-      <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
-        to our Backer member list. Shipping is included.</p>
-      </div>
-
-     <div class="noOfItemsNselectReward flexB">
-      <p>0 <span>left</span></p>
-      <a href="#">Out of stock</a>
-     </div>
-    </section>
+    <section class="pledges-sec">
+      <section class="pledges-card">
+        <div role="none" class="flexB headingAndPledge">
+          <h3>Bamboo Stand</h3>
+          <h4 class="the_pledge">Pledge $25 or more</h4>
+        </div>
     
+        <div role="none" class="typo">
+          <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
+            you’ll be added to a special Backer member list.</p>
+        </div>
+    
+        <div class="noOfItemsNselectReward flexB">
+          <p class="flexI numBold">101 <span>left</span></p>
+          <a class="activeBtn flexI" role="button" href="#">Select Reward</a>
+        </div>
+    
+       </section>
+       
+       <section class="pledges-card">
+        <div role="none" class="flexB headingAndPledge">
+        <h3>Black Edition Stand</h3>
+        <h4 class="the_pledge">Pledge $75 or more</h4>
+        </div>
+    
+        <div role="none" class="typo">
+        <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
+          member list. Shipping is included.</p>
+        </div>
+    
+       <div class="noOfItemsNselectReward flexB">
+        <p class="flexI numBold">64 <span>left</span></p>
+        <a class="activeBtn flexI" role="button" href="#">Select Reward</a>
+       </div>
+       </section>
+     
+       <section class="pledges-card out-of-stock">
+        <div role="none" class="flexB headingAndPledge">
+        <h3>Mahogany Special Edition</h3>
+        <h4 class="the_pledge">Pledge $200 or more</h4>
+        </div>
+    
+        <div role="none" class="typo">
+        <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
+          to our Backer member list. Shipping is included.</p>
+        </div>
+    
+       <div class="noOfItemsNselectReward flexB">
+        <p class="flexI numBold">0 <span>left</span></p>
+        <a class="flexI fadedButton" href="#">Out of stock</a>
+       </div>
+      </section>
+    </section>
+
   </section>
+  
+  
+
+ 
 
 </main>
  
