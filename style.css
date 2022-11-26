@@ -278,26 +278,26 @@ p.numBold > span{
     transform-origin: center;
 }
 
-.nav-btn:hover :is(#top,#middle,#bottom){
+.nav-btn.active :is(#top,#middle,#bottom){
     transition: 
     y 300ms ease-in,  /*First this animation fires*/
     rotate 300ms ease-in 300ms,
     opacity 0ms 300ms;
 }
 
-.nav-btn:hover :is(#top, #bottom){
+.nav-btn.active :is(#top, #bottom){
     y: 130px;
 }
 
-.nav-btn:hover #top{
+.nav-btn.active #top{
     rotate: 45deg;
 }
 
-.nav-btn:hover #bottom{
+.nav-btn.active #bottom{
     rotate: -45deg;
 }
 
-.nav-btn:hover #middle{
+.nav-btn.active #middle{
     opacity: 0;
 }
 
@@ -315,14 +315,22 @@ p.numBold > span{
     opacity: 0;
     pointer-events: none;
 
-    box-shadow: 2px 32px 393px 70px rgba(0,0,0,0.79);
-    -webkit-box-shadow: 2px 32px 393px 70px rgba(0,0,0,0.79);
-    -moz-box-shadow: 2px 32px 393px 70px rgba(0,0,0,0.79);
+    box-shadow: 0 0 0 0;
+    -webkit-box-shadow: 0 0 0 0;
+    -moz-box-shadow: 0 0 0 0;
+
+    transition: box-shadow 250ms;
+    transform-origin: center;
 }
 
 .primary-navigation.expand{
   opacity: 1;
   pointer-events: auto;
+  
+  box-shadow: 2px 32px 393px 70px rgba(0,0,0,0.79);
+  -webkit-box-shadow: 2px 32px 393px 70px rgba(0,0,0,0.79);
+  -moz-box-shadow: 2px 32px 393px 70px rgba(0,0,0,0.79);
+
 }
 
 
@@ -331,11 +339,18 @@ p.numBold > span{
 .primary-navigation .link{
     color: var(--black);
     padding: 1.4em 1em;
+    border-radius: .5em;
 }
 
  .primary-navigation .link:nth-child(2){
     border-top: 1px solid var(--darkGray);
     border-bottom: 1px solid var(--darkGray);
+ }
+
+
+ .primary-navigation .link:hover{
+   background-color: var(--moderateCyan);
+   color: var(--white);
  }
 
 }
