@@ -20,17 +20,24 @@
 <body>
 <main>
   <header>
-    <div role="img" class="bgImage">
+    <!-- <div role="img" class="bgImage">
       <img src="images\image-hero-mobile.jpg" alt="bgImage">
-    </div>
+    </div> -->
+    <picture class="bgImage">
+      <source class="desktop" media="(min-width:755px)" srcset="images\image-hero-desktop.jpg">
+      <source class="mobile" media="(min-width:375px)" srcset="images\image-hero-mobile.jpg">
+      <img src="images\image-hero-mobile.jpg" alt="Background image">
+    </picture>
     <div role="none" class="nav-sec flexB">
       <div class="logo" role="img">
         <img src="images\logo.svg" alt="logo">
       </div>
       
-      <a class="nav-btn" href="#" role="button"><img src="images\icon-hamburger.svg" alt="button"></a>
-      <nav class="nav">
-        <a href="#">About</a><a href="#">Discover</a><a href="#">Get Started</a>
+      <button class="nav-btn" href="#" role="button" aria-controls="primary-navigation" aria-expanded="true">
+        <svg id="lines" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 387.25 321.89"><defs><style>.cls-1{fill:#fff;stroke:#231f20;stroke-miterlimit:10;stroke-width:0.5px;}</style></defs><rect id="top" class="cls-1" x="0.25" y="0.25" width="386.75" height="64.61"/><rect id="middle" class="cls-1" x="0.25" y="128.64" width="386.75" height="64.61"/><rect id="bottom" class="cls-1" x="0.25" y="257.03" width="386.75" height="64.61"/></svg>
+      </button>
+      <nav class="primary-navigation expand flexB">
+        <a class="link" href="#">About</a><a class="link" href="#">Discover</a><a class="link" href="#">Get Started</a>
       </nav>
     </div>
   </header>
